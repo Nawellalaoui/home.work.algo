@@ -1,0 +1,14 @@
+ALGORITHM Occurence
+VAR
+  Tab : ARRAY_OF_INTEGER[N];
+  I:INTEGER;// the number searched in the array
+  N:INTEGER; //the size of the array
+  j:INTEGER; //index for browsing the array
+  cpt :INTEGER=0; //number for counting the occurrence of I
+BEGIN
+    READ(Tab);
+   For j from 0 to (N-1) DO
+        If(Tab[j]==I) cpt:=cpt+1;
+  END_FOR
+  WRITE(‘the occurrence of I is :’cpt);
+END

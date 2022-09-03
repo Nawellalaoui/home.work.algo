@@ -1,0 +1,27 @@
+ALGORITHM  Word_in_sentence
+VAR
+  S : String;
+  I:INTEGER;// the number searched in the array
+  sw:INTEGER=0; //the size of the word
+  j:INTEGER; //index for browsing the string	
+  t:INTEGER =0; //index for array word	
+  cpt :INTEGER=0; //number for counting the number of word
+  ar :ARRAY of STRING;//for displaying the words
+ nbW:INTEGER=0//count the number of word
+BEGIN
+   READ(S);//S=”Hello Nawel, i am your personalized Redemption Challenge. .”
+   For j from 0 to (N-1) DO
+          WHILE( (S[j] <> ‘ ’) or (S[j] <> ‘,’) or (S[j] <> ‘!’) or (S[j] <> ‘?’) or (S[j] <>  ‘ ‘ ‘) or  
+                        (S[j] <>  ‘:‘)  or(S[j]   <>  ‘%‘) or(S[j] <>  ‘$‘) or(S[j] <>  ‘+‘) or (S[j] <>  ‘&‘) 
+                        or(S[j] <>  ‘ (‘) or(S[j] <>  ‘ )‘ )  (S[j] <> ‘ .’) or(S[j] <> ‘”’)  )
+              DO 
+                    sw:=sw+1; //memorizing the size of the word
+                    ar[t]:=ar[j];// array containing the word
+                    j:=j+1;	//increment the String
+              END_WHILE
+             WRITE(ar : sw) ;
+              nbW:=nbW+1;//counting the number of word
+               t:=0 //create a new word
+              j:=j+1 ;//increment the STRING // 
+     END_FOR
+ WRITE(‘NUMBER OF WORD IS : ’nbW);

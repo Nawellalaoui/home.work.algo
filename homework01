@@ -1,0 +1,12 @@
+
+ALGORITHM Print
+VAR
+   N : INTEGER =0 ;
+   i : INTEGER =1 ;
+BEGIN
+   WHILE(i<=N)  DO
+       WRITE(i)
+       i ++;
+  END_WHILE
+END
+
